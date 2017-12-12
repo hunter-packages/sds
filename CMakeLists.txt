@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.0)
 project(sds VERSION 2.0.0)
 
 add_library(sds sds.c)
+target_include_directories(sds PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
 
 include(CTest)
 
