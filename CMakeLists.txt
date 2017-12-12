@@ -20,7 +20,7 @@ endif()
 #   * <prefix>/lib/
 #   * <prefix>/include/
 set(config_install_dir "lib/cmake/${PROJECT_NAME}")
-set(include_install_dir "include/sds")
+set(include_install_dir "include")
 
 set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
 
@@ -67,7 +67,7 @@ install(
 #   * sds.h -> <prefix>/include/sds/sds.h
 install(
     FILES "sds.h" "sdsalloc.h"
-    DESTINATION "${include_install_dir}"
+    DESTINATION "${include_install_dir}/sds"
 )
 
 # Config
